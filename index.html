@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^4/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @keyframes rotate {
+    0%{
+      transform: rotate(0deg);
+    }
+    50%{
+      transform: rotate(360deg);
+    }
+    } 
+    @keyframes glow {
+      0%,100%{
+        box-shadow: 0 0 10px rgba(242, 75, 3, 0.97), 0 0 20px rgba(242, 75, 3, 0.97),0 0 30px rgba(242, 75, 3, 0.97) ;
+      }
+      50%{
+        box-shadow:0 0 20px rgba(229, 245, 2, 0.97);
+      }
+      
+    }
+     
+    .animate-gradient{
+      animation:rotate 2s linear infinite,glow 2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="flex  items-center justify-center min-h-screen bg-gray-900">
+<button class="bg-gradient-to-l from-red-900 via-blue-900 to-green-900 px-6 py-3 rounded-lg shadow-lg text-white transform transition-300 animate-gradient">
+pulsing button  
+</button>
+</body>
+</html>
